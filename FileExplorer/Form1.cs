@@ -19,8 +19,6 @@ namespace FileExplorer
         {
             
             InitializeComponent();
-            panel_FilesList.Controls.Clear();
-
             DisplayFiles(Environment.GetFolderPath(Environment.SpecialFolder.Desktop));
         }
 
@@ -30,11 +28,12 @@ namespace FileExplorer
             {
                 // Code to display the files and folders inside the directory
                 string[] filesList = Directory.GetDirectories(filePath).Concat(Directory.GetFiles(filePath)).ToArray();
+                panel_FilesList.Controls.Clear();
                 currentLocation = filePath;
                 string stringcurrentLocation = "";
 
                 // Display the contents of the filesList array
-                MessageBox.Show(string.Join(Environment.NewLine, filesList));
+                //MessageBox.Show(string.Join(Environment.NewLine, filesList));
 
                 for (int i = 0; i < filesList.Length - 1; i++)
                 {
@@ -51,11 +50,12 @@ namespace FileExplorer
                         newButton.Text = fileName;
                         newButton.Name = filesList[i];
                         newButton.Location = new Point(70, 70);
-                        newButton.Size = new Size(800, 100);
+                        newButton.Size = new Size(800, 50);
                         newButton.TextAlign = ContentAlignment.MiddleLeft;
                         newButton.Padding = new Padding(24, 0, 0, 0);
                         newButton.Click += button_Click_Open;
                         panel_FilesList.Controls.Add(newButton);
+                        panel_FilesList.Refresh();
                     }
                 }
             }
@@ -88,31 +88,31 @@ namespace FileExplorer
 
         private void button_Desktop_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(Environment.GetFolderPath(Environment.SpecialFolder.Desktop));
+            //MessageBox.Show(Environment.GetFolderPath(Environment.SpecialFolder.Desktop));
             DisplayFiles(Environment.GetFolderPath(Environment.SpecialFolder.Desktop));
         }
 
         private void button_Documents_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments));
+            //MessageBox.Show(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments));
             DisplayFiles(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments));
         }
 
         private void button_Pictures_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(Environment.GetFolderPath(Environment.SpecialFolder.MyPictures));
+            //MessageBox.Show(Environment.GetFolderPath(Environment.SpecialFolder.MyPictures));
             DisplayFiles(Environment.GetFolderPath(Environment.SpecialFolder.MyPictures));
         }
 
         private void button_Music_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(Environment.GetFolderPath(Environment.SpecialFolder.MyMusic));
+            //MessageBox.Show(Environment.GetFolderPath(Environment.SpecialFolder.MyMusic));
             DisplayFiles(Environment.GetFolderPath(Environment.SpecialFolder.MyMusic));
         }
 
         private void button_Videos_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(Environment.GetFolderPath(Environment.SpecialFolder.MyVideos));
+            //MessageBox.Show(Environment.GetFolderPath(Environment.SpecialFolder.MyVideos));
             DisplayFiles(Environment.GetFolderPath(Environment.SpecialFolder.MyVideos));
         }
 

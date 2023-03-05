@@ -91,7 +91,7 @@
             // 
             this.panel_FilesList.Location = new System.Drawing.Point(119, 37);
             this.panel_FilesList.Name = "panel_FilesList";
-            this.panel_FilesList.Size = new System.Drawing.Size(587, 373);
+            this.panel_FilesList.Size = new System.Drawing.Size(587, 351);
             this.panel_FilesList.TabIndex = 5;
             // 
             // back
