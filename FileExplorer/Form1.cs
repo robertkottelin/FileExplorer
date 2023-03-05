@@ -30,6 +30,7 @@ namespace FileExplorer
                 string[] filesList = Directory.GetDirectories(filePath).Concat(Directory.GetFiles(filePath)).ToArray();
                 panel_FilesList.Controls.Clear();
                 currentLocation = filePath;
+                currentDirectory.Text = currentLocation.ToString();
                 string stringcurrentLocation = "";
 
                 // Display the contents of the filesList array

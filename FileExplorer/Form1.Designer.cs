@@ -36,6 +36,8 @@
             this.panel_FilesList = new System.Windows.Forms.FlowLayoutPanel();
             this.back = new System.Windows.Forms.Button();
             this.Forward = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.currentDirectory = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button_Desktop
@@ -92,7 +94,7 @@
             // 
             this.panel_FilesList.Location = new System.Drawing.Point(119, 37);
             this.panel_FilesList.Name = "panel_FilesList";
-            this.panel_FilesList.Size = new System.Drawing.Size(587, 351);
+            this.panel_FilesList.Size = new System.Drawing.Size(611, 351);
             this.panel_FilesList.TabIndex = 5;
             // 
             // back
@@ -115,11 +117,29 @@
             this.Forward.UseVisualStyleBackColor = true;
             this.Forward.Click += new System.EventHandler(this.Forward_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(281, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(87, 13);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Current directory:";
+            // 
+            // currentDirectory
+            // 
+            this.currentDirectory.Location = new System.Drawing.Point(374, 10);
+            this.currentDirectory.Name = "currentDirectory";
+            this.currentDirectory.Size = new System.Drawing.Size(356, 20);
+            this.currentDirectory.TabIndex = 8;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.currentDirectory);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.Forward);
             this.Controls.Add(this.back);
             this.Controls.Add(this.panel_FilesList);
@@ -131,6 +151,7 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -144,6 +165,8 @@
         private System.Windows.Forms.FlowLayoutPanel panel_FilesList;
         private System.Windows.Forms.Button back;
         private System.Windows.Forms.Button Forward;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox currentDirectory;
     }
 }
 
