@@ -119,8 +119,21 @@ namespace FileExplorer
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var previousFolder = this.currentLocation.Substring(0, this.currentLocation.LastIndexOf("\\"));
-            DisplayFiles(previousFolder);
+            try
+            {
+                var previousFolder = this.currentLocation.Substring(0, this.currentLocation.LastIndexOf("\\"));
+                DisplayFiles(previousFolder);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Can't go further back");
+            }
+        }
+
+        private void Forward_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Not implemented");
+
         }
     }
 }

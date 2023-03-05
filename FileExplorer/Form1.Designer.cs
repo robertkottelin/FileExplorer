@@ -35,6 +35,7 @@
             this.button_Videos = new System.Windows.Forms.Button();
             this.panel_FilesList = new System.Windows.Forms.FlowLayoutPanel();
             this.back = new System.Windows.Forms.Button();
+            this.Forward = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button_Desktop
@@ -104,11 +105,22 @@
             this.back.UseVisualStyleBackColor = true;
             this.back.Click += new System.EventHandler(this.button1_Click);
             // 
+            // Forward
+            // 
+            this.Forward.Location = new System.Drawing.Point(200, 8);
+            this.Forward.Name = "Forward";
+            this.Forward.Size = new System.Drawing.Size(75, 23);
+            this.Forward.TabIndex = 6;
+            this.Forward.Text = "Forward";
+            this.Forward.UseVisualStyleBackColor = true;
+            this.Forward.Click += new System.EventHandler(this.Forward_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Forward);
             this.Controls.Add(this.back);
             this.Controls.Add(this.panel_FilesList);
             this.Controls.Add(this.button_Videos);
@@ -131,6 +143,7 @@
         private System.Windows.Forms.Button button_Videos;
         private System.Windows.Forms.FlowLayoutPanel panel_FilesList;
         private System.Windows.Forms.Button back;
+        private System.Windows.Forms.Button Forward;
     }
 }
 
